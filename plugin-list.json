@@ -13,5 +13,10 @@
     "id": "notes",
     "Name": "Automatic footnote apparatus for BraDyCMS",
     "version": "1.0"
+  },
+  {
+    "id": "skype",
+    "Name": "Shows a call/chat Skype button",
+    "version": "1.0"
   }
 ]
