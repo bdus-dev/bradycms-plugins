@@ -1,0 +1,14 @@
+{
+  "name": "cookieconsent",
+  "description": "Cookie Consent plugin for BraDyCMS",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jbogdani/bradycms-plugins.git"
+  },
+  "author": "Julian Bogdani (BraDypUS)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbogdani/bradycms-plugins/issues"
+  },
+  "homepage": "https://github.com/jbogdani/bradycms-plugins"
+}
