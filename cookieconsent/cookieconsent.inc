@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * Cookie consent plugin for BraDyCMS
+ * @author      Julian Bogdani <jbogdani@gmail.com>
+ * @copyright    BraDypUS 2017
+ * @license      ISC
+ * @version      1.0
+ * @since        2017/03/20
+ * @see          https://github.com/jbogdani/bradycms-plugins
+ */
 class cookieconsent
 {
   /**

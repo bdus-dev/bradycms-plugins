@@ -1,0 +1,17 @@
+[
+  {
+    "id": "cookieconsent",
+    "Name": "Cookie consent plugin for BraDyCMS",
+    "version": "1.0"
+  },
+  {
+    "id": "gist",
+    "Name": "Embed github gists in article contents",
+    "version": "1.0"
+  },
+  {
+    "id": "notes",
+    "Name": "Automatic footnote apparatus for BraDyCMS",
+    "version": "1.0"
+  }
+]
