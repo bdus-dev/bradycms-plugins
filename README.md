@@ -1,10 +1,36 @@
 # An open-source set of plugins for BraDyCMS
 
 Available plugins:
-- cookieconsent
+- [cookieconsent](#cookie_consent)
+- notes
+
+---
+
+## How to install
+Just copy the plugin main folder inside the `modules` folder of the site directory, i.e.: `sites/default/modules`. Further configuration or plugin usage information are available below at plugin correspondent section of this guide.
+
+---
+
+## Cookie consent
+This is a very simple to use plugin of [Insite's Cookie consent](https://cookieconsent.insites.com/) packages for BraDyCMS.
+
+Once installed the `cookieconsent` custom tag is available for use in article contents or in template files. The custom tags accepts a single argument, which is a json-serialized string or an array containing plugin configuration as explained at https://cookieconsent.insites.com/documentation/about-cookie-consent/.
+
+### Usage example
+    {{ html.ct('cookieconsent', {
+        'content':{
+          'message': 'Questo sito usa cookie per assicurare un\'esperienza ottimale  nel nostro sito web. Preseguendo la navigazione si acconsente al loro utilizzo',
+          'dismiss': 'Ricevuto!',
+          'link': 'Maggiori informazioni',
+          'href': 'informativa-cookie'
+        }
+      })
+    }}
 
 
-# License
+---
+
+## License
 
 [ISC License (ISC)](https://opensource.org/licenses/ISC)
 
