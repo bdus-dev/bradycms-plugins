@@ -15,6 +15,11 @@
     "version": "1.0"
   },
   {
+    "id": "table",
+    "Name": "Easily paginate csv files using datatable",
+    "version": "1.0"
+  },
+  {
     "id": "skype",
     "Name": "Shows a call/chat Skype button",
     "version": "1.0"
