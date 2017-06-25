@@ -1,10 +1,11 @@
 # An open-source set of plugins for BraDyCMS
 
 Available plugins:
-- [cookieconsent](#cookie-consent)
-- [galRef](#galRef)
+- [cookieconsent](#cookieconsent)
+- [galRef](#galref)
 - [gist](#gist)
 - [notes](#notes)
+- [skype](#skype)
 
 ---
 
@@ -35,11 +36,14 @@ Once installed the `cookieconsent` custom tag is available for use in article co
 A simple custom tag to displays link to gallery item. Reference to the gallery
 and to the gallery item should be provided and a display text should be given as content parameter
 
+- `gal` (string, required): gallery unique name
+- `item` (int, required): gallery item's number
+- `content` (string, required): visible linkified content.
+- `rel` (string, optional) rel attribute that links items in galleries.
+
 ### Usage example
     [[galRef gal="article-images" item="1" rel="article-images"]]Figure 1[[/galRef]]
 
-`gal`, `item` and `content` parameters are **mandatory**.
-The `rel` parameter is optional; if missing the gallery name will be used.
 ---
 
 ## gist
@@ -50,7 +54,7 @@ The plugin is used to easily embed in article contents Github gists using a simp
     [[gist]]https://gist.github.com/jbogdani/9185f5d7e8fb1721f5ac.js[[/gist]]
 ---
 
-## Notes
+## notes
 
 This plugin is used to automatically create footnotes for articles. Once installed the custom tag `notes` will be available.
 
@@ -70,17 +74,21 @@ Each note will bear reference to its occurrence in the text and vice-versa. Occu
 
 
 ### Example usage
-    Augue nisl risus nulla dictumst a cursus a at vestibulum congue conubia consectetur suspendisse suscipit eu vel a sodales dui consectetur a a.Nascetur[[notes]]Nunc erat conubia parturient sapien <strong>mattis</strong> posuere.[[/notes]] a hendrerit ornare senectus nec dui vestibulum eget eget penatibus cursus tincidunt sociosqu inceptos ante et.
+    Augue nisl risus nulla dictumst a cursus a at vestibulum congue conubia
+    consectetur suspendisse suscipit eu vel a sodales dui consectetur.
+    Nascetur[[notes]]Nunc erat conubia parturient sapien <strong>mattis</strong> posuere.[[/notes]]
+    a hendrerit ornare senectus nec dui vestibulum eget eget penatibus cursus
+    tincidunt sociosqu inceptos ante et.
 
 ---
 
-## Skype
+## skype
 
 Shows a call/chat contact me Skype button, according to https://www.skype.com/en/developer/create-contactme-buttons/.
 The following options are available
-- content, string, required: skype contact to contact
-- type, string optional: contact type, one of call (default), chat, dropdown
-- imagesize, integer, optional: Skype image size, one of 10, 12, 14, 16, 24, 32 (default)
+- `content` (string, required): skype contact to contact
+- `type` (string optional): contact type, one of call (default), chat, dropdown
+- `imagesize` (integer, optional): Skype image size, one of 10, 12, 14, 16, 24, 32 (default)
 
 ### Minimal example
 [[skype]]skype-username-to-contact[[/skype]]
