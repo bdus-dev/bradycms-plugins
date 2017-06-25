@@ -5,6 +5,11 @@
     "version": "1.0"
   },
   {
+    "id": "galRef",
+    "Name": "Displays link to gallery item",
+    "version": "1.0"
+  },
+  {
     "id": "gist",
     "Name": "Embed github gists in article contents",
     "version": "1.0"

@@ -2,6 +2,7 @@
 
 Available plugins:
 - [cookieconsent](#cookie-consent)
+- [galRef](#galRef)
 - [gist](#gist)
 - [notes](#notes)
 
@@ -12,7 +13,7 @@ Just copy the plugin main folder inside the `modules` folder of the site directo
 
 ---
 
-## Cookie consent
+## cookieconsent
 This is a very simple to use plugin of [Insite's Cookie consent](https://cookieconsent.insites.com/) packages for BraDyCMS.
 
 Once installed the `cookieconsent` custom tag is available for use in article contents or in template files. The custom tags accepts a single argument, which is a json-serialized string or an array containing plugin configuration as explained at https://cookieconsent.insites.com/documentation/about-cookie-consent/.
@@ -30,7 +31,19 @@ Once installed the `cookieconsent` custom tag is available for use in article co
 
 ---
 
-## Embed Github gists in article contents
+## galRef
+A simple custom tag to displays link to gallery item. Reference to the gallery
+and to the gallery item should be provided and a display text should be given as content parameter
+
+### Usage example
+    [[galRef gal="article-images" item="1" rel="article-images"]]Figure 1[[/galRef]]
+
+`gal`, `item` and `content` parameters are **mandatory**.
+The `rel` parameter is optional; if missing the gallery name will be used.
+---
+
+## gist
+Embed Github gists in article contents
 The plugin is used to easily embed in article contents Github gists using a simple custom tag: `gist` and the gist url.
 
 ### Example
