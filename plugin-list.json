@@ -5,6 +5,11 @@
     "version": "1.0"
   },
   {
+    "id": "disqus",
+    "Name": "Easily add Disqus comments in a web page",
+    "version": "1.0"
+  },
+  {
     "id": "galRef",
     "Name": "Displays link to gallery item",
     "version": "1.0"

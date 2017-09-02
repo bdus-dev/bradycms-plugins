@@ -1,6 +1,6 @@
 # disqus
 
-Easily Disqus comments in a web page
+Easily add Disqus comments in a web page
 The following options are available:
 - `content` (string, required); site's shortname in disqus
 

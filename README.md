@@ -2,6 +2,7 @@
 
 Available plugins:
 - [cookieconsent](cookieconsent/README.md)
+- [disqus](disqus/README.md)
 - [galRef](galRef/README.md)
 - [gist](gist/README.md)
 - [notes](notes/README.md)
