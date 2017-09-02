@@ -23,7 +23,7 @@ class prezi
    *                      lock_to_path: int, optional (0 or 1), default: 0. Wether permit zoom or pan or not
    *                      autoplay: int, optional (0 or 1), default: 0. Wether permit autoplay or not
    *                      autohide_ctrls: int, optional (0 or 1), default: 0. Wether permit automatically hide controls or not
-   * @return {string}       well formatted html with skype widget
+   * @return {string}       well formatted html with prezi widget
    */
   public static function init($attr)
   {

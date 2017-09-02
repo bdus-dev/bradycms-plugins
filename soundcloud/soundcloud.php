@@ -12,7 +12,7 @@
 class soundcloud
 {
   /**
-   * Embeds a Sounfcloud widget in a web page
+   * Embeds a Soundcloud widget in a web page
    * https://soundcloud.com/pages/embed
    * @param  array  $attr array of options:
    *                      content: string, required: soindcloud's id
@@ -21,7 +21,7 @@ class soundcloud
    *                      color: string, optional, default: 0. Background color
    *                      auto_play: int, optional (0 or 1), default: 0. Wether permit autoplay or not
    *                      show_artwork: int, optional (0 or 1), default: 0. Wether to show artwork or not
-   * @return {string}       well formatted html with skype widget
+   * @return {string}       well formatted html with prezi widget
    */
   public static function init($attr)
   {
