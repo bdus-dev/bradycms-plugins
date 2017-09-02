@@ -15,14 +15,14 @@ class prezi
    * Embeds a Prezi presentation in a web page
    * https://prezi.com/support/article/sharing/embedding-prezis/
    * @param  array  $attr array of options:
-   *                      content: string, required: prezi's id
-   *                      width: int, optional, default: 550, width of the iframe
-   *                      height: int, optional, default: 400, height of the iframe
-   *                      frameborder: int, optional, default: 0, iframe border
+   *                      content: string, required. Prezi's id
+   *                      width: int, optional, default: 550. Width of the iframe
+   *                      height: int, optional, default: 400. Height of the iframe
+   *                      frameborder: int, optional, default: 0. Iframe border
    *                      bgcolor: string, optional, default: ffffff. Background color
-   *                      lock_to_path: int, optional (0 or 1), default: 0. Wether permit zoom or pan or tnot
+   *                      lock_to_path: int, optional (0 or 1), default: 0. Wether permit zoom or pan or not
    *                      autoplay: int, optional (0 or 1), default: 0. Wether permit autoplay or not
-   *                      autohide_ctrls: int, optional (0 or 1), default: 0. Wether permit automatically hide controlls or not
+   *                      autohide_ctrls: int, optional (0 or 1), default: 0. Wether permit automatically hide controls or not
    * @return {string}       well formatted html with skype widget
    */
   public static function init($attr)
