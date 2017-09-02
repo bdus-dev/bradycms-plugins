@@ -1,7 +1,7 @@
 # An open-source set of plugins for BraDyCMS
 
 Available plugins:
-- [cookieconsent](#cookieconsent)
+- [cookieconsent](cookieconsent/README.md)
 - [galRef](#galref)
 - [gist](#gist)
 - [notes](#notes)
