@@ -3,7 +3,8 @@ A very simple to use plugin of [Insite's Cookie consent](https://cookieconsent.i
 
 Once installed the `cookieconsent` custom tag is available for use in article contents or in template files. The custom tags accepts a single argument, which is a json-serialized string or an array containing plugin configuration as explained at https://cookieconsent.insites.com/documentation/about-cookie-consent/.
 
-### Usage example
+## Usage example
+
 ```twig
 {{ html.ct('cookieconsent', {
     'content':{
