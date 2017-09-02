@@ -20,6 +20,11 @@
     "version": "1.0"
   },
   {
+    "id": "prezi",
+    "Name": "Embed a Prezi presentation in your web page",
+    "version": "1.0"
+  },
+  {
     "id": "table",
     "Name": "Easily paginate csv files using datatable",
     "version": "1.0"
