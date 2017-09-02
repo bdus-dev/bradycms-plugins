@@ -20,5 +20,5 @@ The following options are available:
 ## Full example
 
 ```html
-[[skype width="600" height="400" frameborder="1" bgcolor="000000" lock_to_path="1" autoplay="1" autohide_ctrls="1"]]some-prezi-id[[/skype]]
+[[prezi width="600" height="400" frameborder="1" bgcolor="000000" lock_to_path="1" autoplay="1" autohide_ctrls="1"]]some-prezi-id[[/prezi]]
 ```

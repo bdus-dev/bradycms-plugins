@@ -6,6 +6,7 @@ Available plugins:
 - [gist](gist/README.md)
 - [notes](notes/README.md)
 - [prezi](prezi/README.md)
+- [soundcloud](soundcloud/README.md)
 - [skype](skype/README.md)
 
 ---

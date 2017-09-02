@@ -25,6 +25,11 @@
     "version": "1.0"
   },
   {
+    "id": "soundcloud",
+    "Name": "Embed a Soundcloud widget in your web page",
+    "version": "1.0"
+  },
+  {
     "id": "table",
     "Name": "Easily paginate csv files using datatable",
     "version": "1.0"
