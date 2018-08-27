@@ -10,61 +10,56 @@
  */
 class table extends plugins_ctrl
 {
-  /**
-   * Returns data directory
-   * @return [type] [description]
-   */
-  private function dir()
-  {
-    return SITE_DIR . 'modules/table/data';
-  }
-
-
-  /**
-   * Main callable (from template or via ct) function. Sets modules queue with js and HTML data
-   * @param  array  $data    array of data
-   *                         content: name of CSV file to show
-   *                         class: CSS class (or space separated classes) to apply to table element
-   * @param  OutHtml $outHtml OutHtml object
-   * @return text           Well formatted HTML
-   */
-  public function init($data, OutHtml $outHtml)
-  {
-    $file = $this->dir() . '/' . $data['content'] . '.csv';
-
-    $uid = uniqid('id');
-
-    if (!file_exists($file))
+    /**
+     * Returns data directory
+     * @return [type] [description]
+     */
+    private function dir()
     {
-      return false;
+        return SITE_DIR . 'modules/table/data';
     }
 
-    $d = [];
-    $c =  [];
-    $cnt = 0;
 
-    $file = fopen($file, 'r');
-
-    while (($line = fgetcsv($file)) !== FALSE)
+    /**
+     * Main callable (from template or via ct) function. Sets modules queue with js and HTML data
+     * @param  array  $data    array of data
+     *                         content: name of CSV file to show
+     *                         class: CSS class (or space separated classes) to apply to table element
+     * @param  OutHtml $outHtml OutHtml object
+     * @return text           Well formatted HTML
+     */
+    public function init($data, OutHtml $outHtml)
     {
-      if ($cnt === 0)
-      {
-        $c = $line;
-      }
-      else
-      {
-        array_push($d, $line);
-      }
-      $cnt++;
-    }
-    fclose($file);
+        $file = $this->dir() . '/' . $data['content'] . '.csv';
 
-    $jsondata = json_encode($d);
+        $uid = uniqid('id');
 
-    $columns = '[{ title: "' . implode('"},{title:"', $c) . '"}]';
+        if (!file_exists($file)) {
+            return false;
+        }
+
+        $d = [];
+        $c =  [];
+        $cnt = 0;
+
+        $file = fopen($file, 'r');
+
+        while (($line = fgetcsv($file)) !== false) {
+            if ($cnt === 0) {
+                $c = $line;
+            } else {
+                array_push($d, $line);
+            }
+            $cnt++;
+        }
+        fclose($file);
+
+        $jsondata = json_encode($d);
+
+        $columns = '[{ title: "' . implode('"},{title:"', $c) . '"}]';
 
 
-    $queue = <<<EOD
+        $queue = <<<EOD
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <script>
 $('#{$uid}').DataTable({
@@ -89,59 +84,49 @@ $('#{$uid}').DataTable({
 EOD;
 
 
-    $outHtml->setQueue('modules', $queue, true);
-    return '<div class="table-wrapper">'
-      . '<table id="' . $uid . '" class="dt ' . $data['class'] . '"></table>'
-      . '</div>';
-
-  }
-
-  /**
-   * Main admin function:
-   * - Shows list of available tables (CSV files)
-   * - Delete functionality for sigle files
-   * - Upload functionality for new files
-   * @param  string|false $action Action to perform: delete | list (default)
-   * @param  string|false $path   Path to file to delete
-   */
-  public function admin($action = false, $path = false)
-  {
-    if ($action === 'delete' && $more)
-    {
-      echo $this->deleteFile($this->dir() . '/' . $path);
-      return;
+        $outHtml->setQueue('modules', $queue, true);
+        return '<div class="table-wrapper">' .
+        '<table id="' . $uid . '" class="dt ' . $data['class'] . '"></table>' .
+        '</div>';
     }
 
-    $data = [
+    /**
+     * Main admin function:
+     * - Shows list of available tables (CSV files)
+     * - Delete functionality for sigle files
+     * - Upload functionality for new files
+     * @param  string|false $action Action to perform: delete | list (default)
+     * @param  string|false $path   Path to file to delete
+     */
+    public function admin($action = false, $path = false)
+    {
+        if ($action === 'delete') {
+            echo $this->deleteFile($this->dir() . '/' . $path);
+            return;
+        }
+
+        $data = [
       'upload_dir' => $this->dir(),
       'files' => utils::dirContent($this->dir())
 
     ];
-    $this->render('table', 'list', $data);
-  }
-
-  /**
-   * Deletes file, if exists, and returns json structured response
-   * @param  string $file full path to file to delete
-   */
-  private function deleteFile($file)
-  {
-    error_log($file);
-    if (file_exists($file))
-    {
-      @unlink($file);
+        $this->render('table', 'list', $data);
     }
 
-    if(file_exists($file))
+    /**
+     * Deletes file, if exists, and returns json structured response
+     * @param  string $file full path to file to delete
+     */
+    private function deleteFile($file)
     {
-      return $this->responseJson('error', tr::get('Error. Can not delete file ' . $file));
-    }
-    else
-    {
-      return $this->responseJson('success', tr::get('File deleted'));
-    }
-  }
+        if (file_exists($file)) {
+            @unlink($file);
+        }
 
+        if (file_exists($file)) {
+            return $this->responseJson('error', tr::get('Error. Can not delete file ' . $file));
+        } else {
+            return $this->responseJson('success', tr::get('File deleted'));
+        }
+    }
 }
-
-?>
