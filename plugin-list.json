@@ -1,5 +1,10 @@
 [
   {
+    "id": "bs4menu",
+    "Name": "Renders a Bootstrap v4 menu",
+    "version": "1.0"
+  },
+  {
     "id": "cookieconsent",
     "Name": "Cookie consent plugin for BraDyCMS",
     "version": "1.0"
