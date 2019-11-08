@@ -2,12 +2,21 @@
 Gets menu data and renders a Bootstrap v4 menu
 
 
-## Usage example
+## Minimal example
+
+```twig
+{{ html.ct('bs4menu', {
+    'content':"menu_name"
+  })
+}}
+```
+
+## Full example
 
 ```twig
 {{ html.ct('bs4menu', {
     'content':"menu_name",
-    'ulClass': "custom css classes for main ul"
+    'ulClass': "custom-css-class-1 custom-css-class-n"
   })
 }}
 ```
