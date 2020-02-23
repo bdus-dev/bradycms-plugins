@@ -35,6 +35,11 @@
     "version": "1.0"
   },
   {
+    "id": "skype",
+    "Name": "Shows a call/chat Skype button",
+    "version": "1.0"
+  },
+  {
     "id": "soundcloud",
     "Name": "Embed a Soundcloud widget in your web page",
     "version": "1.0"
@@ -47,11 +52,6 @@
   {
     "id": "twitterCard",
     "Name": "Add a Twitter Card to the page metadata",
-    "version": "1.0"
-  },
-  {
-    "id": "skype",
-    "Name": "Shows a call/chat Skype button",
     "version": "1.0"
   }
 ]
