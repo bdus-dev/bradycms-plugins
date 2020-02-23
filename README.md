@@ -1,14 +1,17 @@
 # An open-source set of plugins for BraDyCMS
 
 Available plugins:
+- [bs4menu](bs4menu/README.md)
 - [cookieconsent](cookieconsent/README.md)
 - [disqus](disqus/README.md)
 - [galRef](galRef/README.md)
 - [gist](gist/README.md)
 - [notes](notes/README.md)
 - [prezi](prezi/README.md)
-- [soundcloud](soundcloud/README.md)
 - [skype](skype/README.md)
+- [soundcloud](soundcloud/README.md)
+- [table](table/README.md)
+- [twitterCard](twitterCard/README.md)
 
 ---
 
