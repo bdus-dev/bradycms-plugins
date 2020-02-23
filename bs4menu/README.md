@@ -1,4 +1,4 @@
-# bs4meny
+# bs4menu
 Gets menu data and renders a Bootstrap v4 menu
 
 
