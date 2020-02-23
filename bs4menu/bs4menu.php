@@ -16,12 +16,14 @@ class bs4menu {
    * @param  array  $data
    *                  content: menu name
    *                  ulClass: space separated classes to apply to nav
-   * @param  Out    $out  [description]
-   * @return [type]       [description]
+   * @param  Out    $out  Out object
+   * @return String       Well formatted html
    */
   public function init( $data = [], Out $out)
   {
     $menu = $data['content'];
+    $ulClass = $data['ulClass'];
+
     if (!$menu){
       error_log("No menu name provided");
       return false;
@@ -34,7 +36,7 @@ class bs4menu {
       return false;
     }
 
-    return $this->makeUl($menu_arr, $data['classes']);
+    return $this->makeUl($menu_arr, $ulClass);
   }
 
   private function currentInSub($el) {
