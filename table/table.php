@@ -30,8 +30,11 @@ class table extends plugins_ctrl
      */
     public function init($data, OutHtml $outHtml)
     {
-        $csv_file = $data['content'];
+        $csv_file   = $data['content'];
         $tb_classes = $data['class'];
+        $separator  = $data['separator'] ? $data['separator'] : false;
+
+        $cap = (int)$_GET['cap'];
 
         $file = $this->dir() . '/' . $csv_file . '.csv';
 
@@ -47,7 +50,7 @@ class table extends plugins_ctrl
 
         $file = fopen($file, 'r');
 
-        while (($line = fgetcsv($file)) !== false) {
+        while (($line = fgetcsv($file, 0, $separator)) !== false) {
             if ($cnt === 0) {
                 $c = $line;
             } else {
