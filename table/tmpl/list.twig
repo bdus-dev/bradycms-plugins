@@ -10,9 +10,7 @@
     </div>
 
     <div class="col-xs-6">
-      <a class="upload" href="#" title="{{ tr.get('Add new') }}">
-        <i class="fa fa-plus"></i> {{ tr.get('Add new') }}
-      </a>
+      <span class="upload"></span>
     </div>
 
   </div>
@@ -47,9 +45,6 @@
             {{ tr.get('download') }}
           </a>
         </td>
-        <td>
-        
-        </td>
       </tr>
       {% else %}
       <tr><td colspan="3">{{ tr.get('No file available yet') }}</td></tr>
@@ -77,8 +72,6 @@
         admin.tabs.reloadThis('#{{ uid }}');
       }
     }, 'json');
-
-    console.log(file);
   });
 
   admin.upload(
@@ -90,5 +83,4 @@
         admin.tabs.reloadThis('#{{ uid }}');
       }
     });
-
 </script>
