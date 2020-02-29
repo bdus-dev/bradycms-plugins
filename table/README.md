@@ -1,9 +1,9 @@
-# gist
-Embed Github gists in article contents
-The plugin is used to easily embed in article contents Github gists using a simple custom tag: `gist` and the gist url.
+# table
+Displays a tables with search functinality (uses datatables.js) using a csv.
+In the admin panel it is possible to upload and delete the source csv files
 
 ## Example
 
 ```html
-[[gist]]https://gist.github.com/jbogdani/9185f5d7e8fb1721f5ac.js[[/gist]]
+[[table class="table_css_class_1 table_css_class_n"]]csv_file_name[[/table]]
 ```

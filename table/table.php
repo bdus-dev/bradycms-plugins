@@ -30,7 +30,10 @@ class table extends plugins_ctrl
      */
     public function init($data, OutHtml $outHtml)
     {
-        $file = $this->dir() . '/' . $data['content'] . '.csv';
+        $csv_file = $data['content'];
+        $tb_classes = $data['class'];
+
+        $file = $this->dir() . '/' . $csv_file . '.csv';
 
         $uid = uniqid('id');
 
@@ -60,7 +63,8 @@ class table extends plugins_ctrl
 
 
         $queue = <<<EOD
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 <script>
 $('#{$uid}').DataTable({
   "language": {
@@ -86,7 +90,7 @@ EOD;
 
         $outHtml->setQueue('modules', $queue, true);
         return '<div class="table-wrapper">' .
-        '<table id="' . $uid . '" class="dt ' . $data['class'] . '"></table>' .
+        '<table id="' . $uid . '" class="dt ' . $tb_classes . '"></table>' .
         '</div>';
     }
 
@@ -106,10 +110,9 @@ EOD;
         }
 
         $data = [
-      'upload_dir' => $this->dir(),
-      'files' => utils::dirContent($this->dir())
-
-    ];
+            'upload_dir' => $this->dir(),
+            'files' => utils::dirContent($this->dir())
+        ];
         $this->render('table', 'list', $data);
     }
 
