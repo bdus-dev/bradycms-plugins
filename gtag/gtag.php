@@ -19,7 +19,7 @@ class gtag extends Controller
         if (!$id) {
             return '<!-- no gtag: missing id -->';;
         }
-        if ($out->cfg['isDraft']) {
+        if ($out->isDraft()) {
             return '<!-- no gtag: draft -->';;
         }
 
