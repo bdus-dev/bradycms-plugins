@@ -25,6 +25,11 @@
     "version": "1.0"
   },
   {
+    "id": "gtag",
+    "Name": "Shows Google Analytics tag",
+    "version": "1.0"
+  },
+  {
     "id": "notes",
     "Name": "Automatic footnote apparatus for BraDyCMS",
     "version": "1.0"
