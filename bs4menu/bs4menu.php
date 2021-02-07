@@ -5,9 +5,9 @@
  * @author      Julian Bogdani <jbogdani@gmail.com>
  * @copyright    BraDypUS 2019
  * @license      ISC
- * @version      1.0
+ * @version      1.1
  * @since        2019/11/08
- * @see          https://github.com/jbogdani/bradycms-plugins
+ * @see          https://github.com/bdus-dev/bradycms-plugins
 */
 class bs4menu {
 
@@ -17,23 +17,23 @@ class bs4menu {
    *                  content: menu name
    *                  ulClass: space separated classes to apply to nav
    * @param  Out    $out  Out object
-   * @return String       Well formatted html
+   * @return string       Well formatted html
    */
-  public function init( $data = [], Out $out)
+  public function init( array $data = [], Out $out): string
   {
     $menu = $data['content'];
     $ulClass = $data['ulClass'];
 
     if (!$menu){
       error_log("No menu name provided");
-      return false;
+      return '';
     }
 
     $menu_arr = $out->getMenu($menu);
 
     if (!is_array($menu_arr) || empty($menu_arr)) {
       error_log("Menu `{$menu}` not found");
-      return false;
+      return '';
     }
 
     return $this->makeUl($menu_arr, $ulClass);
@@ -50,7 +50,8 @@ class bs4menu {
     return $ret;
   }
 
-  private function makeUl(array $list, string $classes = null) :string {
+  private function makeUl(array $list, string $classes = null): string
+  {
 
     $html = '<ul class="navbar-nav ' . ($classes ?: '') . '">';
 
