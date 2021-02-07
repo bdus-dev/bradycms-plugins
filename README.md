@@ -1,6 +1,7 @@
 # An open-source set of plugins for BraDyCMS
 
 Available plugins:
+- [bs3menu](bs3menu/README.md)
 - [bs4menu](bs4menu/README.md)
 - [cookieconsent](cookieconsent/README.md)
 - [disqus](disqus/README.md)
