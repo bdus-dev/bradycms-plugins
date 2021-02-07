@@ -6,6 +6,7 @@ Available plugins:
 - [disqus](disqus/README.md)
 - [galRef](galRef/README.md)
 - [gist](gist/README.md)
+- [gtag](gtag/README.md)
 - [notes](notes/README.md)
 - [prezi](prezi/README.md)
 - [skype](skype/README.md)
