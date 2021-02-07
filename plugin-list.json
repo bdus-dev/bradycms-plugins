@@ -1,67 +1,67 @@
 [
   {
     "id": "bs3menu",
-    "Name": "Renders a Bootstrap v3 menu",
+    "description": "Renders a Bootstrap v3 menu",
     "version": "1.0"
   },
   {
     "id": "bs4menu",
-    "Name": "Renders a Bootstrap v4 menu",
+    "description": "Renders a Bootstrap v4 menu",
     "version": "1.1"
   },
   {
     "id": "cookieconsent",
-    "Name": "Cookie consent plugin for BraDyCMS",
+    "description": "Cookie consent plugin for BraDyCMS",
     "version": "1.0"
   },
   {
     "id": "disqus",
-    "Name": "Easily add Disqus comments in a web page",
+    "description": "Easily add Disqus comments in a web page",
     "version": "1.0"
   },
   {
     "id": "galRef",
-    "Name": "Displays link to gallery item",
+    "description": "Displays link to gallery item",
     "version": "1.0"
   },
   {
     "id": "gist",
-    "Name": "Embed github gists in article contents",
+    "description": "Embed github gists in article contents",
     "version": "1.0"
   },
   {
     "id": "gtag",
-    "Name": "Shows Google Analytics tag",
+    "description": "Shows Google Analytics tag",
     "version": "1.0"
   },
   {
     "id": "notes",
-    "Name": "Automatic footnote apparatus for BraDyCMS",
+    "description": "Automatic footnote apparatus for BraDyCMS",
     "version": "1.0"
   },
   {
     "id": "prezi",
-    "Name": "Embed a Prezi presentation in your web page",
+    "description": "Embed a Prezi presentation in your web page",
     "version": "1.0"
   },
   {
     "id": "skype",
-    "Name": "Shows a call/chat Skype button",
+    "description": "Shows a call/chat Skype button",
     "version": "1.0"
   },
   {
     "id": "soundcloud",
-    "Name": "Embed a Soundcloud widget in your web page",
+    "description": "Embed a Soundcloud widget in your web page",
     "version": "1.0"
   },
   {
     "id": "table",
-    "Name": "Easily paginate csv files using datatable",
+    "description": "Easily paginate csv files using datatable",
     "version": "1.1"
   },
   {
     "id": "twitterCard",
-    "Name": "Add a Twitter Card to the page metadata",
+    "description": "Add a Twitter Card to the page metadata",
     "version": "1.0"
   }
 ]
