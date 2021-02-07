@@ -45,6 +45,11 @@
     "version": "1.0"
   },
   {
+    "id": "sketchfab",
+    "description": "Easily embed Sketchfab models.",
+    "version": "1.0"
+  },
+  {
     "id": "skype",
     "description": "Shows a call/chat Skype button",
     "version": "1.0"
