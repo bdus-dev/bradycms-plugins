@@ -1,5 +1,13 @@
 <?php 
-
+/**
+ * Displays fancybox link to galley image
+ * @author       Julian Bogdani <jbogdani@gmail.com>
+ * @copyright    BraDypUS 2021
+ * @license      ISC
+ * @version      1.0
+ * @since        2021/03/28
+ * @see          https://github.com/jbogdani/bradycms-plugins
+ */
 class gi
 {
   public static function init($data, Out $out)

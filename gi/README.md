@@ -1,5 +1,5 @@
 # gi
-Outputs a link that opens a certain gallery image using fancybox.
+Displays fancybox link to galley image.
 Gallery must exist and mut be ramed after article tsxt id (article gallery).
 
 ## Example
