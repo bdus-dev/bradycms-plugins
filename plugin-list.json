@@ -25,6 +25,11 @@
     "version": "1.0"
   },
   {
+    "id": "gi",
+    "description": "Displays fancybox link to galley image",
+    "version": "1.0"
+  },
+  {
     "id": "gist",
     "description": "Embed github gists in article contents",
     "version": "1.0"
