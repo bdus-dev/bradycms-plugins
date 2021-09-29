@@ -19,7 +19,7 @@ Returns code for easily embedding Sketchfab models
 ## Minimal example
 
 ```twig
-{{ html.tag('sketchfab', {
+{{ html.ct('sketchfab', {
     'content':"IDENTIFIER"
   })
 }}
@@ -40,7 +40,7 @@ or
 ## Full example
 
 ```twig
-{{ html.tag('sketchfab', {
+{{ html.cts('sketchfab', {
     'content':"IDENTIFIER",
     'title': "A 3D model",
     'width': 840,

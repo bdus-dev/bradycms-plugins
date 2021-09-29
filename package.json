@@ -1,6 +1,6 @@
 {
-  "name": "cookieconsent",
-  "description": "Cookie Consent plugin for BraDyCMS",
+  "name": "bduscms-plugins",
+  "description": "Plugins for BradyCMS",
   "repository": {
     "type": "git",
     "url": "git://github.com/jbogdani/bradycms-plugins.git"

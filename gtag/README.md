@@ -10,7 +10,7 @@ Returns code for Google Analytics tag
 ## Minimal example
 
 ```twig
-{{ html.tag('gtag', {
+{{ html.ct('gtag', {
     'content':"IDENTIFIER"
   })
 }}
@@ -31,7 +31,7 @@ or
 ## Full example
 
 ```twig
-{{ html.tag('gtag', {
+{{ html.ct('gtag', {
     'content':"IDENTIFIER",
     'domain':"example.com"
   })
