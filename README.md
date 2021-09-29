@@ -6,6 +6,7 @@ Available plugins:
 - [cookieconsent](cookieconsent/README.md)
 - [disqus](disqus/README.md)
 - [galRef](galRef/README.md)
+- [gi](gi/README.md)
 - [gist](gist/README.md)
 - [gtag](gtag/README.md)
 - [notes](notes/README.md)
