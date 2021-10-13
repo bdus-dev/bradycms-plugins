@@ -1,0 +1,35 @@
+<div id="{{ uid }}_sy">
+
+  <p class="lead"><strong>1.</strong> Select year</p>
+  <div class="cont">
+    <div class="input-append content0">
+      <select class="col-md-2 form-control year">
+      {% for year, vol in available_volumes %}
+        <option value="{{ year }}">vol. {{vol }}, anno {{ year }}</option>
+      {% endfor %}
+      </select>
+      
+      <button class="btn btn-primary send">
+        Prosegui
+      </button>
+    </div>
+    <hr />
+
+    <div class="content"></div>
+
+  </div>
+</div>
+
+<script>
+
+$('#{{ uid }}_sy .send').on('click', (e)=>{
+  const year = $('#{{ uid }}_sy .year').val();
+  
+  $('#{{ uid }}_sy .content').html('<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> please wait...');
+  
+  $.get('controller.php?obj=plugins_ctrl&method=run&param[]=crossRef&param[]=showReport&param[]=' + year, d => {
+    $('#{{ uid }}_sy .content').html(d)
+  })
+  
+});
+</script>

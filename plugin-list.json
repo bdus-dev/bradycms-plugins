@@ -15,6 +15,11 @@
     "version": "1.0"
   },
   {
+    "id": "crossRef",
+    "description": "Automatically deposit articles to CrossRef (requires Metadata plugin)",
+    "version": "1.0"
+  },
+  {
     "id": "disqus",
     "description": "Easily add Disqus comments in a web page",
     "version": "1.0"

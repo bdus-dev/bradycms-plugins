@@ -1,0 +1,32 @@
+<div id="{{ uid }}_sr">
+  <p class="lead">
+    <strong>2.</strong> Preview of processed articles of year {{ year }}:
+  </p>
+  <div>{{ html | raw }}</div>
+
+  <hr>
+
+  <div>
+    <label>
+      <input type="checkbox" class="overwrite" /> Overwrite existant metadata
+    </label>
+  </div>
+
+  <button class="btn btn-primary send">
+    Preview XML
+  </button>
+  <hr />
+
+  <div class="content"></div>
+</div>
+
+<script>
+$('#{{ uid }}_sr .send').on('click', function(){
+  const overwrite = $('#{{ uid }}_sr .overwrite').is(':checked');
+  // Placeholder
+  $('#{{ uid }}_sr .content')
+    .html('<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> please wait...')
+  // and then load content
+    .load('controller.php?obj=plugins_ctrl&method=run&param[]=crossRef&param[]=buildXML&param[]={{ year }}' + (overwrite ? '&param[]=true' : ''));
+});
+</script>

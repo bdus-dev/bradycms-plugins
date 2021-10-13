@@ -1,0 +1,32 @@
+<div id="{{ uid }}_bx">
+  <p class="lead">
+    <strong>3.</strong> Preview of XML to be sent to CrossRef:
+  </p>
+  <p class="text-muted">File: {{ tmpfname }}</p>
+  
+  <pre 
+    style="height:300px;" 
+    class="bg-warning">{{ xml }}</pre>
+  
+  <div class="clearfix">
+    <label>
+      <input type="checkbox" class="test" checked="true" /> Test mode
+    </label>
+
+    <button class="btn btn-primary send">
+      Submit to CrossRef
+    </button>
+  </div>
+
+  <div class="content"></div>
+
+</div>
+
+<script>
+$('#{{ uid }}_bx .send').on('click', e => {
+  const checked = $('#{{ uid }}_bx .test').is(':checked');
+  $('#{{ uid }}_bx .content')
+    .html('<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> please wait...')
+    .load('controller.php?obj=plugins_ctrl&method=run&param[]=crossRef&param[]=submit&param[]={{ tmpfname }}' + (checked ? '&param[]=true' : '') );
+});
+</script>
