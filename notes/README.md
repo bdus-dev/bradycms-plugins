@@ -6,6 +6,8 @@ Notes must be marked in the text in the exact place where the reference number w
 
 Rich html can be used in notes text. A notes section, wrapped in `div.footNotes` will be created at the end of the article and notes will be listed after the `<h2 class="notes">Note</h2>` head.
 
+Since 2022-01-09, the lable for reference list supports system- and article-based language.
+
 Each note will bear reference to its occurrence in the text and vice-versa. Occurrence links will be provided, or usage with [Bootstrap popovers](http://getbootstrap.com/javascript/#popovers) with:
 
 - `ftpopover` css class

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Automatic footnote apparatus for BraDyCMS
  * @author      Julian Bogdani <jbogdani@gmail.com>
@@ -10,19 +11,21 @@
  */
 class notes
 {
-  private static $mynotes = array();
+  private static $mynotes = [];
+  private static $out;
 
 
-  public static function init($attr)
+  public static function init(array $attr, Out $out)
   {
     self::$mynotes[] = $attr['content'];
+    self::$out = $out;
 
     $val = end(self::$mynotes);
     $key = key(self::$mynotes);
     $key = $key + 1;
 
 
-    return $html . '<a ' .
+    return '<a ' .
       ' href="javascript:void(0)" ' .
       ' class="ftpopover" ' .
       //' href="#ft-note-' .  count(self::$mynotes) . '" ' .
@@ -33,22 +36,35 @@ class notes
       ' data-original-title="Nota ' . $key . '"' .
       ' >' .
       ' [' . $key . ']' .
-    '</a>';
+      '</a>';
   }
 
   public static function end()
   {
-    if (count(self::$mynotes) == 0)
-    {
+    if (count(self::$mynotes) == 0) {
       return;
     }
-
+    $lang = self::$out->getArticle()['lang'] ?: self::$out->getLang();
+    // Article custom field lang
+    switch ($lang) {
+      case 'english':
+      case 'eng':
+      case 'en':
+        $label = 'Notes';
+        break;
+      case 'italian':
+      case 'ita':
+      case 'it':
+      default:
+        $label = 'Note';
+        break;
+    }
+    
     $html = '<div class="footNotes">' .
-        '<hr />' .
-        '<h2 class="notes">Note</h2>';
+      '<hr />' .
+      '<h2 class="notes">' . $label . '</h2>';
 
-    foreach(self::$mynotes as $k => $note)
-    {
+    foreach (self::$mynotes as $k => $note) {
       $html .= '<p><a id="ft-note-' . ($k + 1) . '" href="#bd-note-' . ($k + 1) . '">' . ($k + 1) . '</a>. ' . $note . '</p>';
     }
     $html .= '</div>';
